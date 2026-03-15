@@ -13,11 +13,27 @@
 <style>
 
 body{
-background:black;
+background-image: url("Neonverseradio-github-banner.jpg");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;
 color:#00ffff;
 font-family:Arial;
 text-align:center;
 padding:40px;
+}
+
+/* dark overlay for readability */
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+z-index:-1;
 }
 
 h1{
