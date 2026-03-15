@@ -93,7 +93,7 @@ transform:scale(1.07);
 display:flex;
 align-items:center;
 justify-content:center;
-gap:25px;
+gap:30px;
 margin-top:20px;
 }
 
@@ -103,15 +103,15 @@ margin-top:20px;
 display:flex;
 flex-direction:column-reverse;
 gap:4px;
+overflow:hidden;
+height:100px;
+animation:rmsLoop 2s infinite ease-in-out;
 }
 
 .segment{
 width:16px;
 height:8px;
 border-radius:2px;
-opacity:.25;
-transform-origin:bottom;
-animation:rmsRun 1.8s infinite ease-in-out;
 }
 
 /* colors */
@@ -120,29 +120,19 @@ animation:rmsRun 1.8s infinite ease-in-out;
 .yellow{ background:#ffff00; box-shadow:0 0 6px #ffff00; }
 .red{ background:#ff0000; box-shadow:0 0 6px #ff0000; }
 
-/* smooth running RMS animation */
+/* RMS rising animation */
 
-@keyframes rmsRun{
+@keyframes rmsLoop{
 
-0%{
-opacity:.25;
-transform:scaleY(.6);
-}
+0%{ height:20px; }
 
-40%{
-opacity:1;
-transform:scaleY(1.1);
-}
+25%{ height:60px; }
 
-70%{
-opacity:.6;
-transform:scaleY(.9);
-}
+50%{ height:100px; }
 
-100%{
-opacity:.3;
-transform:scaleY(.7);
-}
+75%{ height:70px; }
+
+100%{ height:30px; }
 
 }
 
