@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-<title>NeonVerse Radio - The Sound of Future City</title>
-
-<meta name="description" content="NeonVerse Radio is an online station streaming AI music, synthwave, and futuristic beats 24/7. The sound of the future city.">
-
-<meta name="keywords" content="AI music radio, synthwave radio, cyberpunk radio, neonverse radio">
-
-<meta name="robots" content="index, follow">
-
 <style>
+
+/* Background */
 
 body{
 background-image:url("toronto-neon.jpg");
@@ -19,12 +9,13 @@ background-position:center;
 background-repeat:no-repeat;
 background-color:black;
 color:#00ffff;
-font-family:Arial;
+font-family:Arial, sans-serif;
 text-align:center;
 padding:40px;
 }
 
-/* dark overlay for readability */
+/* Dark overlay for readability */
+
 body::before{
 content:"";
 position:fixed;
@@ -33,82 +24,11 @@ left:0;
 width:100%;
 height:100%;
 background:rgba(0,0,0,0.65);
+pointer-events:none;
 z-index:-1;
 }
 
-h1{
-font-size:60px;
-color:#ff00ff;
-text-shadow:0 0 20px #ff00ff;
-}
-
-.tagline{
-font-size:20px;
-margin-bottom:20px;
-}
-
-.listen-button{
-display:inline-block;
-padding:15px 40px;
-margin:20px;
-font-size:22px;
-color:black;
-background:#00ffff;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
-animation:neonCycle 7s infinite;
-}
-
-@keyframes neonCycle{
-
-0%{
-background:#00ffff;
-box-shadow:0 0 10px #00ffff, 0 0 20px #00ffff;
-}
-
-25%{
-background:#00ff66;
-box-shadow:0 0 10px #00ff66, 0 0 20px #00ff66;
-}
-
-50%{
-background:#ffbf00;
-box-shadow:0 0 10px #ffbf00, 0 0 20px #ffbf00;
-}
-
-75%{
-background:#ff00ff;
-box-shadow:0 0 10px #ff00ff, 0 0 20px #ff00ff;
-}
-
-100%{
-background:#00ffff;
-box-shadow:0 0 10px #00ffff, 0 0 20px #00ffff;
-}
-
-}
-
-.listen-button:hover{
-transform:scale(1.07);
-}
-
-audio{
-margin-top:20px;
-width:300px;
-}
-
-.nowplaying{
-margin-top:30px;
-font-size:20px;
-color:#ffffff;
-}
-
-</style>
-
-</head>
-
-<body>
+/* Neon Header */
 
 h1{
 font-size:60px;
@@ -146,52 +66,87 @@ text-shadow:0 0 20px #ff00ff, 0 0 40px #ff00ff;
 
 }
 
-<div id="player">
+/* Tagline */
 
-<h2>Live Player</h2>
+.tagline{
+font-size:20px;
+margin-bottom:20px;
+}
 
-<audio controls>
-<source src="https://a9.asurahosting.com/listen/neonverse/radio.mp3" type="audio/mpeg">
-</audio>
+/* Animated Listen Button */
 
-</div>
+.listen-button{
+display:inline-block;
+padding:15px 40px;
+margin:20px;
+font-size:22px;
+color:black;
+background:#00ffff;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+animation:neonCycle 4s infinite;
+}
 
-<div class="nowplaying">
+@keyframes neonCycle{
 
-<h3>Now Playing</h3>
+0%{
+background:#00ffff;
+box-shadow:0 0 10px #00ffff, 0 0 20px #00ffff;
+}
 
-<p id="song">Loading...</p>
+25%{
+background:#00ff66;
+box-shadow:0 0 10px #00ff66, 0 0 20px #00ff66;
+}
 
-</div>
+50%{
+background:#ffbf00;
+box-shadow:0 0 10px #ffbf00, 0 0 20px #ffbf00;
+}
 
-<script>
+75%{
+background:#ff00ff;
+box-shadow:0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
 
-async function getNowPlaying(){
-
-try{
-
-let response = await fetch("https://a9.asurahosting.com/api/nowplaying/neonverse");
-
-let data = await response.json();
-
-document.getElementById("song").innerText =
-data.now_playing.song.artist + " - " + data.now_playing.song.title;
+100%{
+background:#00ffff;
+box-shadow:0 0 10px #00ffff, 0 0 20px #00ffff;
+}
 
 }
 
-catch{
-
-document.getElementById("song").innerText = "Live broadcast in progress";
-
+.listen-button:hover{
+transform:scale(1.07);
 }
 
+/* Audio Player */
+
+audio{
+margin-top:20px;
+width:300px;
 }
 
-getNowPlaying();
+/* Now Playing */
 
-setInterval(getNowPlaying,15000);
+.nowplaying{
+margin-top:30px;
+font-size:20px;
+color:#ffffff;
+}
 
-</script>
+/* Neon Links */
 
-</body>
-</html>
+a{
+color:#00ffff;
+text-decoration:none;
+font-weight:bold;
+}
+
+a:hover{
+color:#ff00ff;
+text-shadow:0 0 10px #ff00ff;
+}
+
+</style>
