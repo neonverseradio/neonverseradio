@@ -10,6 +10,8 @@
 
 <meta name="robots" content="index, follow">
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 
 body{
@@ -20,8 +22,10 @@ text-align:center;
 padding:40px;
 }
 
+/* Responsive header */
+
 h1{
-font-size:60px;
+font-size:clamp(36px, 8vw, 60px);
 color:#ff00ff;
 text-shadow:0 0 20px #ff00ff;
 }
@@ -42,6 +46,7 @@ border-radius:10px;
 text-decoration:none;
 font-weight:bold;
 animation:neonCycle 10s infinite;
+max-width:90%;
 }
 
 @keyframes neonCycle{
@@ -77,9 +82,12 @@ box-shadow:0 0 10px #00ffff, 0 0 20px #00ffff;
 transform:scale(1.07);
 }
 
+/* Responsive player */
+
 audio{
 margin-top:20px;
-width:300px;
+width:100%;
+max-width:400px;
 }
 
 .nowplaying{
@@ -88,7 +96,7 @@ font-size:20px;
 color:#ffffff;
 }
 
-/* NEW: Neon link styling */
+/* Neon link styling */
 
 a{
 color:#00ffff;
@@ -100,6 +108,25 @@ font-size:18px;
 a:hover{
 color:#ff00ff;
 text-shadow:0 0 10px #ff00ff;
+}
+
+/* Mobile layout adjustments */
+
+@media (max-width:600px){
+
+body{
+padding:20px;
+}
+
+.tagline{
+font-size:18px;
+}
+
+a{
+display:inline-block;
+margin:6px;
+}
+
 }
 
 </style>
@@ -133,8 +160,6 @@ text-shadow:0 0 10px #ff00ff;
 <p id="song">Loading...</p>
 
 </div>
-
-<!-- NEW SECTION -->
 
 <h2>Explore NeonVerse</h2>
 
