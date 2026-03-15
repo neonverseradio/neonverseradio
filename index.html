@@ -57,25 +57,35 @@ background:#00ffff;
 border-radius:10px;
 text-decoration:none;
 font-weight:bold;
-animation:neonGlow 3s infinite alternate;
+animation:neonCycle 4s infinite;
 }
 
-@keyframes neonGlow{
+@keyframes neonCycle{
 
 0%{
 background:#00ffff;
 box-shadow:0 0 10px #00ffff, 0 0 20px #00ffff;
 }
 
-100%{
+33%{
 background:#00ff66;
 box-shadow:0 0 10px #00ff66, 0 0 20px #00ff66;
+}
+
+66%{
+background:#ff00ff;
+box-shadow:0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+100%{
+background:#00ffff;
+box-shadow:0 0 10px #00ffff, 0 0 20px #00ffff;
 }
 
 }
 
 .listen-button:hover{
-transform:scale(1.05);
+transform:scale(1.07);
 }
 
 audio{
