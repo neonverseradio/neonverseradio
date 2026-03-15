@@ -4,13 +4,14 @@
 
 <title>NeonVerse Radio - The Sound of Future City</title>
 
-<meta name="description" content="NeonVerse Radio is a Toronto based online radio station streaming AI generated music, synthwave and cyberpunk beats 24/7.">
+<meta name="description" content="NeonVerse Radio is an online station streaming AI music, synthwave, and futuristic beats 24/7. The sound of the future city.">
 
 <meta name="keywords" content="AI music radio, synthwave radio, cyberpunk radio, neonverse radio">
 
 <meta name="robots" content="index, follow">
 
 <style>
+
 body{
 background:black;
 color:#00ffff;
@@ -20,13 +21,46 @@ padding:40px;
 }
 
 h1{
-font-size:50px;
+font-size:60px;
 color:#ff00ff;
+text-shadow:0 0 20px #ff00ff;
+}
+
+.tagline{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.listen-button{
+display:inline-block;
+padding:15px 40px;
+margin:20px;
+font-size:22px;
+color:black;
+background:#00ffff;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 0 20px #00ffff;
+}
+
+.listen-button:hover{
+background:#ff00ff;
+box-shadow:0 0 30px #ff00ff;
+color:white;
 }
 
 audio{
 margin-top:20px;
+width:300px;
 }
+
+.nowplaying{
+margin-top:30px;
+font-size:20px;
+color:#ffffff;
+}
+
 </style>
 
 </head>
@@ -35,16 +69,58 @@ margin-top:20px;
 
 <h1>NeonVerse Radio</h1>
 
-<p>The Sound of Future City</p>
+<p class="tagline">The Sound of Future City</p>
 
 <p>Streaming AI generated music, synthwave and futuristic soundscapes 24/7.</p>
 
-<h2>Listen Live</h2>
+<a class="listen-button" href="#player">LISTEN LIVE</a>
+
+<div id="player">
+
+<h2>Live Player</h2>
 
 <audio controls>
 <source src="https://a9.asurahosting.com/listen/neonverse/radio.mp3" type="audio/mpeg">
-Your browser does not support the audio player.
 </audio>
+
+</div>
+
+<div class="nowplaying">
+
+<h3>Now Playing</h3>
+
+<p id="song">Loading...</p>
+
+</div>
+
+<script>
+
+async function getNowPlaying(){
+
+try{
+
+let response = await fetch("https://a9.asurahosting.com/api/nowplaying/neonverse");
+
+let data = await response.json();
+
+document.getElementById("song").innerText =
+data.now_playing.song.artist + " - " + data.now_playing.song.title;
+
+}
+
+catch{
+
+document.getElementById("song").innerText = "Live broadcast in progress";
+
+}
+
+}
+
+getNowPlaying();
+
+setInterval(getNowPlaying,15000);
+
+</script>
 
 </body>
 </html>
