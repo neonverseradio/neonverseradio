@@ -21,8 +21,6 @@ text-align:center;
 padding:40px;
 background-color:black;
 
-/* neon grid background */
-
 background-image:
 linear-gradient(#00ffff22 1px, transparent 1px),
 linear-gradient(90deg, #00ffff22 1px, transparent 1px);
@@ -37,19 +35,15 @@ animation:gridGlow 12s infinite alternate;
 100%{ background-color:#020012; }
 }
 
-/* Glass radio panel */
-
 .radio-panel{
 background:rgba(0,0,0,0.65);
 border-radius:20px;
 padding:30px;
-max-width:600px;
+max-width:700px;
 margin:auto;
 box-shadow:0 0 25px #00ffff33;
 backdrop-filter:blur(8px);
 }
-
-/* Header */
 
 h1{
 font-size:clamp(36px, 8vw, 60px);
@@ -66,8 +60,6 @@ font-size:20px;
 margin-bottom:20px;
 }
 
-/* LISTEN button */
-
 .listen-button{
 display:inline-block;
 padding:15px 40px;
@@ -79,7 +71,6 @@ border-radius:10px;
 text-decoration:none;
 font-weight:bold;
 animation:neonCycle 10s infinite;
-max-width:90%;
 }
 
 @keyframes neonCycle{
@@ -96,57 +87,69 @@ max-width:90%;
 transform:scale(1.07);
 }
 
-/* Segmented RMS Meter */
+/* PLAYER + METERS LAYOUT */
 
-.rms-container{
+.player-row{
 display:flex;
+align-items:center;
 justify-content:center;
-margin:20px 0;
+gap:25px;
+margin-top:20px;
 }
+
+/* RMS METER */
 
 .rms-meter{
 display:flex;
 flex-direction:column-reverse;
-gap:3px;
+gap:4px;
 }
 
 .segment{
 width:16px;
 height:8px;
 border-radius:2px;
-opacity:.3;
-animation:rmsSegments 1.4s infinite ease-in-out;
+opacity:.2;
 }
 
-.segment.green{
-background:#00ff00;
-box-shadow:0 0 6px #00ff00;
+/* colors */
+
+.green{ background:#00ff00; box-shadow:0 0 6px #00ff00; }
+.yellow{ background:#ffff00; box-shadow:0 0 6px #ffff00; }
+.red{ background:#ff0000; box-shadow:0 0 6px #ff0000; }
+
+/* animation steps */
+
+.rms-meter .segment{
+animation:meterMove 1.5s infinite;
 }
 
-.segment.yellow{
-background:#ffff00;
-box-shadow:0 0 6px #ffff00;
+.rms-meter .segment:nth-child(1){animation-delay:0s;}
+.rms-meter .segment:nth-child(2){animation-delay:.1s;}
+.rms-meter .segment:nth-child(3){animation-delay:.2s;}
+.rms-meter .segment:nth-child(4){animation-delay:.3s;}
+.rms-meter .segment:nth-child(5){animation-delay:.4s;}
+.rms-meter .segment:nth-child(6){animation-delay:.5s;}
+.rms-meter .segment:nth-child(7){animation-delay:.6s;}
+.rms-meter .segment:nth-child(8){animation-delay:.7s;}
+
+@keyframes meterMove{
+
+0%{opacity:.2;}
+
+30%{opacity:1;}
+
+60%{opacity:.5;}
+
+100%{opacity:.2;}
+
 }
 
-.segment.red{
-background:#ff0000;
-box-shadow:0 0 6px #ff0000;
-}
-
-@keyframes rmsSegments{
-
-0%{ opacity:.2; transform:scaleY(.7); }
-50%{ opacity:1; transform:scaleY(1.2); }
-100%{ opacity:.4; transform:scaleY(.8); }
-
-}
-
-/* Player */
+/* PLAYER */
 
 audio{
-margin-top:20px;
 width:100%;
-max-width:400px;
+max-width:320px;
 }
 
 .nowplaying{
@@ -154,8 +157,6 @@ margin-top:30px;
 font-size:20px;
 color:#ffffff;
 }
-
-/* Links */
 
 a{
 color:#00ffff;
@@ -169,22 +170,10 @@ color:#ff00ff;
 text-shadow:0 0 10px #ff00ff;
 }
 
-/* Mobile */
-
 @media (max-width:600px){
 
-body{ padding:20px; }
-
-.tagline{ font-size:18px; }
-
-.radio-panel{
-padding:20px;
-border-radius:15px;
-}
-
-a{
-display:inline-block;
-margin:6px;
+.player-row{
+flex-direction:column;
 }
 
 }
@@ -205,23 +194,19 @@ margin:6px;
 
 <a class="listen-button" href="#player">LISTEN LIVE</a>
 
-<!-- Segmented RMS meter -->
+<div class="player-row">
 
-<div class="rms-container">
+<!-- LEFT METER -->
+
 <div class="rms-meter">
-
 <div class="segment green"></div>
 <div class="segment green"></div>
 <div class="segment green"></div>
 <div class="segment green"></div>
-
 <div class="segment yellow"></div>
 <div class="segment yellow"></div>
-
 <div class="segment red"></div>
 <div class="segment red"></div>
-
-</div>
 </div>
 
 <div id="player">
@@ -231,6 +216,21 @@ margin:6px;
 <audio controls>
 <source src="https://a9.asurahosting.com/listen/neonverse/radio.mp3" type="audio/mpeg">
 </audio>
+
+</div>
+
+<!-- RIGHT METER -->
+
+<div class="rms-meter">
+<div class="segment green"></div>
+<div class="segment green"></div>
+<div class="segment green"></div>
+<div class="segment green"></div>
+<div class="segment yellow"></div>
+<div class="segment yellow"></div>
+<div class="segment red"></div>
+<div class="segment red"></div>
+</div>
 
 </div>
 
