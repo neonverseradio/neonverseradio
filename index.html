@@ -1,21 +1,18 @@
 <style>
 
-/* Background */
-
 body{
-background-image:url("toronto-neon.jpg");
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-background-color:black;
+background-image: url("toronto-neon.jpg");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;
 color:#00ffff;
-font-family:Arial, sans-serif;
+font-family:Arial;
 text-align:center;
 padding:40px;
 }
 
-/* Dark overlay for readability */
-
+/* dark overlay for readability */
 body::before{
 content:"";
 position:fixed;
@@ -24,56 +21,19 @@ left:0;
 width:100%;
 height:100%;
 background:rgba(0,0,0,0.65);
-pointer-events:none;
 z-index:-1;
 }
-
-/* Neon Header */
 
 h1{
 font-size:60px;
 color:#ff00ff;
-text-shadow:0 0 20px #ff00ff, 0 0 40px #ff00ff;
-animation:neonBlink 10s infinite;
+text-shadow:0 0 20px #ff00ff;
 }
-
-@keyframes neonBlink{
-
-0%{
-opacity:1;
-text-shadow:0 0 20px #ff00ff, 0 0 40px #ff00ff;
-}
-
-48%{
-opacity:1;
-text-shadow:0 0 20px #ff00ff, 0 0 40px #ff00ff;
-}
-
-50%{
-opacity:0.7;
-text-shadow:0 0 5px #ff00ff;
-}
-
-52%{
-opacity:1;
-text-shadow:0 0 25px #ff00ff, 0 0 45px #ff00ff;
-}
-
-100%{
-opacity:1;
-text-shadow:0 0 20px #ff00ff, 0 0 40px #ff00ff;
-}
-
-}
-
-/* Tagline */
 
 .tagline{
 font-size:20px;
 margin-bottom:20px;
 }
-
-/* Animated Listen Button */
 
 .listen-button{
 display:inline-block;
@@ -85,68 +45,24 @@ background:#00ffff;
 border-radius:10px;
 text-decoration:none;
 font-weight:bold;
-animation:neonCycle 4s infinite;
-}
-
-@keyframes neonCycle{
-
-0%{
-background:#00ffff;
-box-shadow:0 0 10px #00ffff, 0 0 20px #00ffff;
-}
-
-25%{
-background:#00ff66;
-box-shadow:0 0 10px #00ff66, 0 0 20px #00ff66;
-}
-
-50%{
-background:#ffbf00;
-box-shadow:0 0 10px #ffbf00, 0 0 20px #ffbf00;
-}
-
-75%{
-background:#ff00ff;
-box-shadow:0 0 10px #ff00ff, 0 0 20px #ff00ff;
-}
-
-100%{
-background:#00ffff;
-box-shadow:0 0 10px #00ffff, 0 0 20px #00ffff;
-}
-
+box-shadow:0 0 20px #00ffff;
 }
 
 .listen-button:hover{
-transform:scale(1.07);
+background:#ff00ff;
+box-shadow:0 0 30px #ff00ff;
+color:white;
 }
-
-/* Audio Player */
 
 audio{
 margin-top:20px;
 width:300px;
 }
 
-/* Now Playing */
-
 .nowplaying{
 margin-top:30px;
 font-size:20px;
 color:#ffffff;
-}
-
-/* Neon Links */
-
-a{
-color:#00ffff;
-text-decoration:none;
-font-weight:bold;
-}
-
-a:hover{
-color:#ff00ff;
-text-shadow:0 0 10px #ff00ff;
 }
 
 </style>
