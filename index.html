@@ -57,13 +57,25 @@ background:#00ffff;
 border-radius:10px;
 text-decoration:none;
 font-weight:bold;
-box-shadow:0 0 20px #00ffff;
+animation:neonGlow 3s infinite alternate;
+}
+
+@keyframes neonGlow{
+
+0%{
+background:#00ffff;
+box-shadow:0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+100%{
+background:#00ff66;
+box-shadow:0 0 10px #00ff66, 0 0 20px #00ff66;
+}
+
 }
 
 .listen-button:hover{
-background:#ff00ff;
-box-shadow:0 0 30px #ff00ff;
-color:white;
+transform:scale(1.05);
 }
 
 audio{
