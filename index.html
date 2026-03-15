@@ -15,11 +15,35 @@
 <style>
 
 body{
-background:black;
 color:#00ffff;
 font-family:Arial;
 text-align:center;
 padding:40px;
+background-color:black;
+
+/* neon grid background */
+
+background-image:
+linear-gradient(#00ffff22 1px, transparent 1px),
+linear-gradient(90deg, #00ffff22 1px, transparent 1px);
+
+background-size:40px 40px;
+
+animation:gridGlow 12s infinite alternate;
+}
+
+/* subtle grid glow animation */
+
+@keyframes gridGlow{
+
+0%{
+background-color:#000000;
+}
+
+100%{
+background-color:#020012;
+}
+
 }
 
 /* Glass radio panel */
