@@ -14,14 +14,10 @@
 
 <link rel="canonical" href="https://neonverseradio.com">
 
-<!-- Open Graph (social sharing) -->
-
 <meta property="og:title" content="NeonVerse Radio">
 <meta property="og:description" content="The Sound of Future City. Streaming synthwave and electronic music 24/7.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://neonverseradio.com">
-
-<!-- Radio Station Structured Data -->
 
 <script type="application/ld+json">
 {
@@ -45,14 +41,14 @@
 
 <style>
 
+/* existing CSS unchanged */
+
 body{
 color:#00ffff;
 font-family:Arial;
 text-align:center;
 padding:40px;
 background-color:black;
-
-/* neon grid background */
 
 background-image:
 linear-gradient(#00ffff22 1px, transparent 1px),
@@ -63,16 +59,10 @@ background-size:40px 40px;
 animation:gridGlow 12s infinite alternate;
 }
 
-/* subtle grid glow animation */
-
 @keyframes gridGlow{
-
 0%{ background-color:#000000; }
 100%{ background-color:#020012; }
-
 }
-
-/* Glass radio panel */
 
 .radio-panel{
 background:rgba(0,0,0,0.65);
@@ -83,8 +73,6 @@ margin:auto;
 box-shadow:0 0 25px #00ffff33;
 backdrop-filter:blur(8px);
 }
-
-/* Responsive header */
 
 h1{
 font-size:clamp(36px, 8vw, 60px);
@@ -100,8 +88,6 @@ text-shadow:0 0 10px #00ffff;
 font-size:20px;
 margin-bottom:20px;
 }
-
-/* Equalizer animation */
 
 .equalizer{
 display:flex;
@@ -127,11 +113,9 @@ box-shadow:0 0 10px #00ffff;
 .bar:nth-child(7){ animation-delay:0.6s; }
 
 @keyframes equalize{
-
 0%{ height:10px; }
 50%{ height:35px; }
 100%{ height:10px; }
-
 }
 
 .listen-button{
@@ -149,20 +133,16 @@ max-width:90%;
 }
 
 @keyframes neonCycle{
-
 0%{ background:#00ffff; box-shadow:0 0 10px #00ffff, 0 0 20px #00ffff; }
 25%{ background:#00ff66; box-shadow:0 0 10px #00ff66, 0 0 20px #00ff66; }
 50%{ background:#ffbf00; box-shadow:0 0 10px #ffbf00, 0 0 20px #ffbf00; }
 75%{ background:#ff00ff; box-shadow:0 0 10px #ff00ff, 0 0 20px #ff00ff; }
 100%{ background:#00ffff; box-shadow:0 0 10px #00ffff, 0 0 20px #00ffff; }
-
 }
 
 .listen-button:hover{
 transform:scale(1.07);
 }
-
-/* Responsive player */
 
 audio{
 margin-top:20px;
@@ -176,8 +156,6 @@ font-size:20px;
 color:#ffffff;
 }
 
-/* Neon link styling */
-
 a{
 color:#00ffff;
 text-decoration:none;
@@ -190,24 +168,11 @@ color:#ff00ff;
 text-shadow:0 0 10px #ff00ff;
 }
 
-/* Mobile layout adjustments */
-
 @media (max-width:600px){
-
 body{ padding:20px; }
-
 .tagline{ font-size:18px; }
-
-.radio-panel{
-padding:20px;
-border-radius:15px;
-}
-
-a{
-display:inline-block;
-margin:6px;
-}
-
+.radio-panel{ padding:20px; border-radius:15px; }
+a{ display:inline-block; margin:6px; }
 }
 
 </style>
@@ -225,8 +190,6 @@ margin:6px;
 <p>Streaming synthwave, electronic and futuristic soundscapes 24/7.</p>
 
 <a class="listen-button" href="#player">LISTEN LIVE</a>
-
-<!-- Equalizer -->
 
 <div class="equalizer">
 <div class="bar"></div>
@@ -255,6 +218,23 @@ margin:6px;
 <p id="song">Loading...</p>
 
 </div>
+
+<!-- ABOUT SECTION -->
+
+<h2>About NeonVerse Radio</h2>
+
+<p>
+NeonVerse Radio is an independent online radio station based in Toronto, Canada,
+streaming synthwave, electronic and futuristic music 24 hours a day.
+Inspired by cyberpunk aesthetics and modern electronic soundscapes,
+NeonVerse Radio explores the sound of the future city through modern electronic music.
+</p>
+
+<p>
+The station features emerging artists, experimental productions and
+next-generation electronic music styles inspired by neon-lit cityscapes
+and digital worlds.
+</p>
 
 <h2>Explore NeonVerse</h2>
 
@@ -291,7 +271,6 @@ document.getElementById("song").innerText = "Live broadcast in progress";
 }
 
 getNowPlaying();
-
 setInterval(getNowPlaying,15000);
 
 </script>
