@@ -166,7 +166,29 @@ color:#ff00ff;
 text-shadow:0 0 10px #ff00ff;
 }
 
-/* NEW: Station info panel */
+/* LIVE indicator */
+
+.onair{
+display:inline-block;
+margin-top:10px;
+padding:6px 14px;
+border-radius:20px;
+font-weight:bold;
+font-size:14px;
+letter-spacing:1px;
+background:#ff0000;
+color:white;
+box-shadow:0 0 10px #ff0000, 0 0 20px #ff0000;
+animation:onairpulse 2s infinite;
+}
+
+@keyframes onairpulse{
+0%{ box-shadow:0 0 5px #ff0000; }
+50%{ box-shadow:0 0 18px #ff0000, 0 0 30px #ff0000; }
+100%{ box-shadow:0 0 5px #ff0000; }
+}
+
+/* Station info panel */
 
 .station-info{
 margin-top:25px;
@@ -218,6 +240,8 @@ a{ display:inline-block; margin:6px; }
 
 <div id="player">
 
+<div class="onair">● LIVE ON AIR</div>
+
 <h2>Live Player</h2>
 
 <audio controls>
@@ -233,74 +257,3 @@ a{ display:inline-block; margin:6px; }
 <p id="song">Loading...</p>
 
 </div>
-
-<!-- ABOUT SECTION -->
-
-<h2>About NeonVerse Radio</h2>
-
-<p>
-NeonVerse Radio is an independent online radio station based in Toronto, Canada,
-streaming synthwave, electronic and futuristic music 24 hours a day.
-Inspired by cyberpunk aesthetics and modern electronic soundscapes,
-NeonVerse Radio explores the sound of the future city through modern electronic music.
-</p>
-
-<p>
-The station features emerging artists, experimental productions and
-next-generation electronic music styles inspired by neon-lit cityscapes
-and digital worlds.
-</p>
-
-<!-- NEW: STATION INFO PANEL -->
-
-<div class="station-info">
-
-<p><strong>Station:</strong> NeonVerse Radio</p>
-<p><strong>Location:</strong> Toronto, Canada</p>
-<p><strong>Format:</strong> Synthwave / Electronic</p>
-<p><strong>Broadcast:</strong> Online Streaming</p>
-<p><strong>Status:</strong> Independent Radio Station</p>
-
-</div>
-
-<h2>Explore NeonVerse</h2>
-
-<p>
-<a href="https://open.spotify.com/artist/6EBEIhjpBksal7cFrMHcbx">Spotify</a> |
-<a href="https://yourpodcastlink.com" target="_blank">Podcast</a> |
-<a href="https://www.reddit.com/r/NeonVerse/" target="_blank">Community</a> |
-<a href="submit.html">Submit Music</a>
-</p>
-
-</div>
-
-<script>
-
-async function getNowPlaying(){
-
-try{
-
-let response = await fetch("https://a9.asurahosting.com/api/nowplaying/neonverse");
-
-let data = await response.json();
-
-document.getElementById("song").innerText =
-data.now_playing.song.artist + " - " + data.now_playing.song.title;
-
-}
-
-catch{
-
-document.getElementById("song").innerText = "Live broadcast in progress";
-
-}
-
-}
-
-getNowPlaying();
-setInterval(getNowPlaying,15000);
-
-</script>
-
-</body>
-</html>
