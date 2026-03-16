@@ -72,6 +72,28 @@ box-shadow:0 0 25px #00ffff33;
 backdrop-filter:blur(8px);
 }
 
+/* LIVE indicator */
+
+.onair{
+display:inline-block;
+margin-bottom:12px;
+padding:6px 16px;
+border-radius:20px;
+font-weight:bold;
+font-size:14px;
+letter-spacing:1px;
+background:#ff0000;
+color:white;
+box-shadow:0 0 10px #ff0000, 0 0 20px #ff0000;
+animation:onairpulse 2s infinite;
+}
+
+@keyframes onairpulse{
+0%{ box-shadow:0 0 5px #ff0000; }
+50%{ box-shadow:0 0 18px #ff0000, 0 0 30px #ff0000; }
+100%{ box-shadow:0 0 5px #ff0000; }
+}
+
 h1{
 font-size:clamp(36px, 8vw, 60px);
 color:#ff00ff;
@@ -166,28 +188,6 @@ color:#ff00ff;
 text-shadow:0 0 10px #ff00ff;
 }
 
-/* LIVE indicator */
-
-.onair{
-display:inline-block;
-margin-top:10px;
-padding:6px 14px;
-border-radius:20px;
-font-weight:bold;
-font-size:14px;
-letter-spacing:1px;
-background:#ff0000;
-color:white;
-box-shadow:0 0 10px #ff0000, 0 0 20px #ff0000;
-animation:onairpulse 2s infinite;
-}
-
-@keyframes onairpulse{
-0%{ box-shadow:0 0 5px #ff0000; }
-50%{ box-shadow:0 0 18px #ff0000, 0 0 30px #ff0000; }
-100%{ box-shadow:0 0 5px #ff0000; }
-}
-
 /* Station info panel */
 
 .station-info{
@@ -220,40 +220,8 @@ a{ display:inline-block; margin:6px; }
 
 <div class="radio-panel">
 
+<div class="onair">● LIVE ON AIR</div>
+
 <h1>NeonVerse Radio</h1>
 
 <p class="tagline">The Sound of Future City</p>
-
-<p>Streaming synthwave, electronic and futuristic soundscapes 24/7.</p>
-
-<a class="listen-button" href="#player">LISTEN LIVE</a>
-
-<div class="equalizer">
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-</div>
-
-<div id="player">
-
-<div class="onair">● LIVE ON AIR</div>
-
-<h2>Live Player</h2>
-
-<audio controls>
-<source src="https://a9.asurahosting.com/listen/neonverse/radio.mp3" type="audio/mpeg">
-</audio>
-
-</div>
-
-<div class="nowplaying">
-
-<h3>Now Playing</h3>
-
-<p id="song">Loading...</p>
-
-</div>
