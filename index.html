@@ -194,11 +194,61 @@ font-size:16px;
 color:#ffffff;
 }
 
+/* NEW: Bottom page buttons */
+
+.bottom-nav{
+text-align:center;
+margin:40px 0 10px 0;
+}
+
+.bottom-nav a{
+display:inline-block;
+margin:10px;
+padding:12px 24px;
+font-size:14px;
+text-decoration:none;
+color:#ffffff;
+border-radius:6px;
+background:rgba(0,0,0,0.4);
+transition:all 0.3s ease;
+}
+
+.bottom-nav .home-btn{
+border:1px solid #00ffff;
+}
+
+.bottom-nav .page2-btn{
+border:1px solid #ff00ff;
+}
+
+.bottom-nav .page3-btn{
+border:1px solid #00ff9c;
+}
+
+.bottom-nav .home-btn:hover{
+background:#00ffff;
+color:#000000;
+text-shadow:none;
+}
+
+.bottom-nav .page2-btn:hover{
+background:#ff00ff;
+color:#000000;
+text-shadow:none;
+}
+
+.bottom-nav .page3-btn:hover{
+background:#00ff9c;
+color:#000000;
+text-shadow:none;
+}
+
 @media (max-width:600px){
 body{ padding:20px; }
 .tagline{ font-size:18px; }
 .radio-panel{ padding:20px; border-radius:15px; }
 a{ display:inline-block; margin:6px; }
+.bottom-nav a{ display:block; max-width:220px; margin:10px auto; }
 }
 
 </style>
@@ -315,16 +365,9 @@ Tune in anywhere and experience The Sound of Future City.
   <li><a href="https://streema.com/radios/NeonVerse_Radio" target="_blank">Listen on Streema</a></li>
   <li><a href="https://www.canadaradiostations.com/neonverse-radio" target="_blank">Listen on CanadaRadioStations</a></li>
   <li><a href="https://radoxo.com/fr/canada/neonverse-radio" target="_blank">Listen on Radoxo</a></li>
-  <li><a href="https://www.radiotune.fm/fr/@neonverse-radio"_blank">Listen on RadioTune.fm</a></li>
+  <li><a href="https://www.radiotune.fm/fr/@neonverse-radio" target="_blank">Listen on RadioTune.fm</a></li>
   <li><a href="https://mytuner-radio.com/radio/neonverse-radio-518571/" target="_blank">Listen on myTunerRadio</a></li>
 </ul>
-
-<head>
-<title>Privacy Policy - NeonVerse Radio</title>
-<meta name="robots" content="index, follow">
-</head>
-
-<body style="background:black;color:#00ffff;font-family:Arial;text-align:center;padding:40px;">
 
 <h1>Privacy Policy</h1>
 
@@ -345,7 +388,12 @@ Tune in anywhere and experience The Sound of Future City.
 Independent Online Radio Station
 </footer>
 
-</body>
+<!-- NEW: Bottom Navigation Buttons -->
+<div class="bottom-nav">
+  <a class="home-btn" href="index.html">Home</a>
+  <a class="page2-btn" href="page2.html">Page 2</a>
+  <a class="page3-btn" href="page3.html">Page 3</a>
+</div>
 
 <script>
 
