@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>NeonVerse Radio – Seattle Signal (24/7)</title>
+
+<meta name="description" content="Seattle Signal on NeonVerse Radio. Rainy cyberpunk atmosphere, synthwave, and electronic music streaming 24/7.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+color:#66ccff;
+font-family:Arial;
+text-align:center;
+padding:40px;
+background-color:#050814;
+
+background-image:
+linear-gradient(#66ccff22 1px, transparent 1px),
+linear-gradient(90deg, #66ccff22 1px, transparent 1px);
+
+background-size:40px 40px;
+}
+
+.radio-panel{
+background:rgba(0,0,0,0.7);
+border-radius:20px;
+padding:30px;
+max-width:600px;
+margin:auto;
+box-shadow:0 0 25px #66ccff33;
+}
+
+h1{
+font-size:clamp(36px, 8vw, 60px);
+color:#66ccff;
+text-shadow:0 0 20px #66ccff;
+}
+
+.tagline{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.listen-button{
+display:inline-block;
+padding:15px 40px;
+margin:20px;
+font-size:20px;
+color:black;
+background:#66ccff;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.listen-button:hover{
+transform:scale(1.07);
+}
+
+audio{
+margin-top:20px;
+width:100%;
+max-width:400px;
+}
+
+.bottom-nav{
+text-align:center;
+margin:40px 0 10px 0;
+}
+
+.bottom-nav a{
+display:inline-block;
+margin:10px;
+padding:12px 24px;
+font-size:14px;
+text-decoration:none;
+color:#ffffff;
+border-radius:6px;
+background:rgba(0,0,0,0.4);
+transition:all 0.3s ease;
+}
+
+.home-btn{ border:1px solid #00ffff; }
+.page2-btn{ border:1px solid #66ccff; }
+.page3-btn{ border:1px solid #00ff9c; }
+
+.home-btn:hover{ background:#00ffff; color:#000; }
+.page2-btn:hover{ background:#66ccff; color:#000; }
+.page3-btn:hover{ background:#00ff9c; color:#000; }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="radio-panel">
+
+<h1>Seattle Signal</h1>
+
+<p class="tagline">NeonVerse Radio – West Coast Transmission</p>
+
+<p>
+Rain falls. Signals drift. The city hums beneath neon reflections.
+</p>
+
+<p>
+Welcome to the Seattle Signal — a darker, atmospheric channel of NeonVerse Radio.
+Expect deep synthwave, ambient electronic textures, and late-night drive energy.
+</p>
+
+<a class="listen-button" href="#player">Enter Signal</a>
+
+<div id="player">
+
+<h2>Live Player</h2>
+
+<audio controls>
+<source src="https://a9.asurahosting.com/listen/neonverse/radio.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+</div>
+
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+  <a class="home-btn" href="index.html">Home</a>
+  <a class="page2-btn" href="page2.html">Page 2</a>
+  <a class="page3-btn" href="page3.html">Page 3</a>
+</div>
+
+</body>
+</html>
