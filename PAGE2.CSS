@@ -59,7 +59,11 @@ h1 {
         0 0 16px #d600ff,
         0 0 24px #a000ff;
 }
-
+/*space for slogan /*
+.line2 {
+    display: block;
+    margin-top: 12px;
+}
 
 
 /* Buttons */
