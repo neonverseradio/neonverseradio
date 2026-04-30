@@ -45,10 +45,10 @@ h1 {
         0 0 30px #d600ff,
         0 0 40px #b000ff,
         0 0 60px #8000ff;
- margin-bottom: 10px; /* space under first line */
+ margin-bottom: 30px; /* space under first line */
 }
 .slogan {
- margin-top: 10px; /* space above second line */
+ margin-top: 30px; /* space above second line */
     font-size: 18px;
     margin-top: 10px;
     margin-bottom: 25px;
