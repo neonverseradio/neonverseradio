@@ -49,7 +49,7 @@ h1 {
 }
 .slogan-space {
     display: block;
-    height: 30px; /* adjust spacing here */
+    height: 100px; /* adjust spacing here */
 }
 
 .slogan {
