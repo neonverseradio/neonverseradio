@@ -47,6 +47,11 @@ h1 {
         0 0 60px #8000ff;
  margin-bottom: 30px; /* space under first line */
 }
+.slogan-space {
+    display: block;
+    height: 30px; /* adjust spacing here */
+}
+
 .slogan {
  margin-top: 30px; /* space above second line */
     font-size: 18px;
@@ -59,6 +64,7 @@ h1 {
         0 0 16px #d600ff,
         0 0 24px #a000ff;
 }
+
 
 
 /* Buttons */
