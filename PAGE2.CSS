@@ -50,18 +50,14 @@ h1 {
     font-size: 18px;
     margin-top: 10px;
     margin-bottom: 25px;
+    color: #ffb3ff;
     font-weight: bold;
-    letter-spacing: 0.5px;
-
-    color: #ffe6ff; /* soft core glow */
-
     text-shadow:
-        0 0 4px #ff9bff,     /* pink inner */
-        0 0 8px #ff7bff,     /* magenta */
-        0 0 16px #cc66ff,    /* blend */
-        0 0 24px #66ccff,    /* cyan shift */
-        0 0 40px #3399ff;    /* blue outer */
+        0 0 8px #ff7bff,
+        0 0 16px #d600ff,
+        0 0 24px #a000ff;
 }
+
 
 /* Buttons */
 .listen-button {
