@@ -62,7 +62,7 @@ h1 {
 /*space for slogan /*
 .line2 {
     display: block;
-    margin-top: 12px;
+    margin-top: 14px; /* controls the space */
 }
 
 
