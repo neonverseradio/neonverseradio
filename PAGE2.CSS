@@ -47,17 +47,20 @@ h1 {
         0 0 60px #8000ff;
 }
 .slogan {
-    font-size: 35px;
+    font-size: 34px;
     margin-top: 10px;
-    margin-bottom: 25px;
-    color: #ff4dff; /* brighter, hotter pink */
+    margin-bottom: 30px;
+    color: #ff4dff;
     font-weight: bold;
+    letter-spacing: 1px;
     text-shadow:
         0 0 12px #ff4dff,
         0 0 24px #d600ff,
         0 0 36px #a000ff,
-        0 0 48px #7000ff;
+        0 0 48px #7000ff,
+        0 0 70px #5000ff;
 }
+
 
 
 
