@@ -49,17 +49,15 @@ h1 {
 .slogan {
     font-size: 34px;
     margin-top: 10px;
-    margin-bottom: 30px;
-    color: #ff4dff;
+    margin-bottom: 25px;
+    color: #99caff; /* soft neon blue */
     font-weight: bold;
     letter-spacing: 1px;
     text-shadow:
-        0 0 12px #ff4dff,
-        0 0 24px #d600ff,
-        0 0 36px #a000ff,
-        0 0 48px #7000ff,
-        0 0 70px #5000ff;
+        0 0 6px #66b7ff,
+        0 0 12px #3399ff;
 }
+
 /* Artist of the month */
 .artist-month {
     margin-top: 40px;
