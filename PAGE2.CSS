@@ -48,21 +48,20 @@ h1 {
  margin-bottom: 30px; /* space under first line */
 }
 .slogan {
- margin-top: 30px; /* space above second line */
-    font-size: 18px;
+    font-size: 34px;
     margin-top: 10px;
     margin-bottom: 25px;
-    color: #ffb3ff;
+    color: #99caff;
     font-weight: bold;
+    letter-spacing: 1px;
     text-shadow:
-        0 0 8px #ff7bff,
-        0 0 16px #d600ff,
-        0 0 24px #a000ff;
+        0 0 6px #66b7ff,
+        0 0 12px #3399ff;
 }
 /*space for slogan /*
 .line2 {
-    display: block;
-    margin-top: 14px; /* controls the space */
+    display: block;      /* forces new line */
+    margin-top: 14px;    /* creates the space */
 }
 
 
