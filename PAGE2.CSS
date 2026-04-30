@@ -47,21 +47,16 @@ h1 {
         0 0 60px #8000ff;
 }
 .slogan {
-    font-size: 34px;
+    font-size: 18px;
     margin-top: 10px;
-    margin-bottom: 30px;
-    color: #ff4dff;
+    margin-bottom: 25px;
+    color: #ffb3ff;
     font-weight: bold;
-    letter-spacing: 1px;
     text-shadow:
-        0 0 12px #ff4dff,
-        0 0 24px #d600ff,
-        0 0 36px #a000ff,
-        0 0 48px #7000ff,
-        0 0 70px #5000ff;
+        0 0 8px #ff7bff,
+        0 0 16px #d600ff,
+        0 0 24px #a000ff;
 }
-
-
 
 
 /* Buttons */
