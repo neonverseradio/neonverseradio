@@ -49,77 +49,18 @@ h1 {
 .slogan {
     font-size: 34px;
     margin-top: 10px;
-    margin-bottom: 25px;
-    color: #99caff; /* soft neon blue */
+    margin-bottom: 30px;
+    color: #ff4dff;
     font-weight: bold;
     letter-spacing: 1px;
     text-shadow:
-        0 0 6px #66b7ff,
-        0 0 12px #3399ff;
+        0 0 12px #ff4dff,
+        0 0 24px #d600ff,
+        0 0 36px #a000ff,
+        0 0 48px #7000ff,
+        0 0 70px #5000ff;
 }
 
-/* Artist of the month */
-.artist-month {
-    margin-top: 40px;
-    padding: 20px;
-    background: rgba(0,0,0,0.4);
-    border-radius: 15px;
-    box-shadow: 0 0 20px #d600ff55;
-}
-
-.artist-month h2 {
-    font-size: 28px;
-    color: #ff7bff;
-    text-shadow:
-        0 0 12px #ff7bff,
-        0 0 24px #d600ff;
-}
-
-.artist-photo {
-    width: 70%;
-    max-width: 260px;
-    border-radius: 12px;
-    margin-top: 15px;
-    box-shadow:
-        0 0 20px #ff7bff,
-        0 0 40px #d600ff;
-}
-
-.artist-name {
-    font-size: 22px;
-    margin-top: 15px;
-    color: #ffb3ff;
-    text-shadow:
-        0 0 10px #ff7bff,
-        0 0 20px #d600ff;
-}
-
-.artist-desc {
-    font-size: 15px;
-    margin: 15px auto;
-    max-width: 500px;
-    color: #ffccff;
-    line-height: 1.6;
-}
-
-.submit-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 30px;
-    font-size: 18px;
-    color: black;
-    background: #ff66ff;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 0 20px #ff66ff;
-    transition: transform 0.2s ease;
-}
-
-.submit-button:hover {
-    transform: scale(1.07);
-    background: #ff99ff;
-}
 
 
 
